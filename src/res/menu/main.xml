@@ -1,0 +1,48 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.mobilesensing.MainActivity" >
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never"/>
+    <item 
+        android:id="@+id/sensors_list"
+        android:title="@string/sensors_list"
+        android:orderInCategory="100"
+        app:showAsAction="never"></item>
+	<item 
+        android:id="@+id/action_wifi"
+        android:title="@string/action_wifi"
+        android:orderInCategory="100"
+        app:showAsAction="never"></item>
+	<item 
+        android:id="@+id/save_wifi"
+        android:title="@string/save_wifi"
+        android:orderInCategory="100"
+        app:showAsAction="never"></item>
+	<item 
+        android:id="@+id/measurement"
+        android:title="@string/measure"
+        android:orderInCategory="100"
+        app:showAsAction="never"></item>
+	<item 
+        android:id="@+id/measurement1"
+        android:title="@string/measure_150"
+        android:orderInCategory="100"
+        app:showAsAction="never"></item>
+	<item 
+        android:id="@+id/localization"
+        android:title="@string/localize"
+        android:orderInCategory="100"
+        app:showAsAction="never"></item>
+ 	<item 
+        android:id="@+id/delete"
+        android:title="@string/delete"
+        android:orderInCategory="100"
+        app:showAsAction="never"></item>
+ 	
+
+</menu>

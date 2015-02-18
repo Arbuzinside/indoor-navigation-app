@@ -1,0 +1,58 @@
+Mobile sensing app
+
+MainActivity class:
+	Describes all navigation and communication between MainActivity and another classes
+
+AccessPoint class:
+	Describes single access point as BSSID and level
+
+
+SensorList class:
+	Describes list of sensors in an mobile device
+
+WiFi:
+
+public List<ScanResult> getWifi(WifiManager mgr)
+	return List of Wi-Fi points 
+
+public boolean saveWifiData(List<ScanResult> lst, Context context)
+	Accepts List of Wi-Fi points and creates a directory in the root of internal storage for saving data
+
+private void writeToFile(List<ScanResult> lst, File f)
+	Saves list of Wi-Fi points to file as JSON objects
+
+public JSONObject parseScanList(List<ScanResult> L)
+	create JSONObject from List
+
+public JSONObject readWifi(Context context)
+	return JSONObject of stored APs from file
+
+public List<AccessPoint> readParse(String readWifi)
+	create a List of APs from String in JSON format
+
+public List<AccessPoint> parseRealTime(String realTimeWifi)
+	create a List of APs from a String, the JSON structure of provided data is a bit different from user data
+
+
+public Double caclPosition(List<AccessPoint> sPoints, List<AccessPoint> rPoints)
+	calculates the distance based on stored data and real-time data
+
+public String Position(HashMap<Double, String> positions)
+	Return the name of closest position from Map
+
+public List<AccessPoint> calcRev(List<AccessPoint> givenData, int _occur, int def)
+	Calculate average value for the List of APs with the same BSSID, for missing BSSIDs uses def value (-110 by default), occur - number of points taling into considaration
+
+public String readRealTime(Context context)
+	Read saved data from file
+
+public String readJSON(Context context, String filename)
+	Reas *.json file format
+
+private boolean isExternalStorageWritable()
+	Checks if internal storage is writable
+
+private boolean isExternalStorageReadable()
+	Checks if internal storage is readeble 
+
+
